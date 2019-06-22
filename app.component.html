@@ -1,0 +1,24 @@
+      
+      <div class="Block">
+            <label id="lbl">Code </label>
+            <input type='file' (change)="incomingfile($event)">
+          
+          </div>
+          <button (click)="upload()">Process</button>
+          
+          
+           <table style="padding: 20px; width: 60%;">
+            <tr>
+              <th  align="left">Expense Description</th>
+              <th  align="left">Amount</th>
+              <th  align="left">Tax Code</th>
+              <th  align="left">Category</th>
+            </tr>
+            <tr *ngFor="let item of temp">
+              <td>{{item.Expense}}</td>
+              <td>{{item.Amount}}</td>
+              <td>{{item.Tax}}</td>
+              <td>{{item.Category}}</td> 
+            </tr>
+          </table>    
+ 
